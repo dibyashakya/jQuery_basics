@@ -5,7 +5,11 @@
     <title>jQuery Selectors Example</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <style>
-      p,table {
+      .highlight {
+        background-color: yellow;
+      }
+      p,
+      table {
         border-collapse: collapse;
       }
       td {
@@ -14,32 +18,41 @@
     </style>
   </head>
   <body>
-<h3>Q5. Dibya Shakya</h3>
-    <div id="myId">
-        <h3>Basic Selector</h3><br>
-        This is selected by <b>ID</b>.</div>
+    <h2>Q5. Dibya Shakya</h2>
+
+    <!-- Basic Selectors -->
+    <div id="myId">This is selected by <b>ID</b>.</div>
     <div class="myClass">This is selected by <b>Class</b>.</div>
     <p>This is selected by <b>Element</b>.</p>
+
     <hr />
-     <h3>Attribute Selector</h3>
+
+    <!-- Attribute Selectors -->
+    <button data-toggle="modal">Open Modal</button>
     <br />
     <label
       ><input type="radio" name="gender" value="male" checked /> Male</label
     >
     <label><input type="radio" name="gender" value="female" /> Female</label>
+
     <hr />
+
+    <!-- Hierarchy Selectors -->
     <div>
-      <p><h3>Hierarchy Selector</h3> <br>Paragraph inside div (descendant)</p>
+      <p>Paragraph inside div (descendant)</p>
       <span><p>Nested paragraph (still descendant)</p></span>
       <p>Direct child paragraph</p>
     </div>
+
     <hr />
-     <h3>Pseudo Selectors</h3>
+
+    <!-- Pseudo Selectors -->
     <ul>
       <li>First item</li>
       <li>Second item</li>
       <li>Third item</li>
     </ul>
+
     <table>
       <tr>
         <td>Row 1</td>
@@ -51,21 +64,31 @@
         <td>Row 3</td>
       </tr>
     </table>
+
     <p style="display: none">This paragraph is hidden</p>
+
     <script>
       $(document).ready(function () {
+        // Basic Selectors
         $("#myId").addClass("highlight");
         $(".myClass").addClass("highlight");
         $("p").first().addClass("highlight");
+
+        // Attribute Selectors
+        $("[data-toggle]").addClass("highlight");
         $('[data-toggle="modal"]').text(
           "Changed button text by Attribute selector",
         );
         $("input[name='gender']:checked").parent().addClass("highlight");
-        $("div p").eq(0).addClass("highlight"); 
-        $("div > p").last().addClass("highlight"); 
+
+        // Hierarchy Selectors
+        $("div p").eq(0).addClass("highlight"); // Descendant
+        $("div > p").last().addClass("highlight"); // Direct child
+
+        // Pseudo Selectors
         $("li:first").addClass("highlight");
         $("li:last").addClass("highlight");
-        $("tr:even").addClass("highlight"); 
+        $("tr:even").addClass("highlight"); // 0-based index
         $("tr:odd").css("background-color", "#d0f0d0");
         $(":visible").first().css("border", "2px solid blue");
         $("p:hidden").show().css("color", "red");
