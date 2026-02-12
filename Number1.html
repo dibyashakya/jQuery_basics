@@ -1,0 +1,67 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>image Description</title>
+</head>
+<body>
+    <p>Q1. Dibya Shakya</p>
+    <img src="nature.jpg" alt="Image Not Found">
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus mollitia autem impedit nisi, iusto commodi suscipit deleniti cum dignissimos voluptatibus, tenetur, voluptatum sit! Corrupti quis corporis quasi, architecto dignissimos impedit quaerat veniam. Corporis nobis sapiente veniam qui aliquam consectetur perspiciatis asperiores nam error minus, harum voluptates labore porro ex. Assumenda sint, a laboriosam, ut omnis cupiditate vel temporibus quaerat, sed molestias facilis totam sapiente? Repudiandae asperiores sed velit laboriosam, dolores tempore laborum facere voluptatem consectetur cumque, nisi fuga illo! Voluptas itaque consequatur hic, ex accusamus eum. Id, aliquam nobis sunt nulla harum sit esse pariatur. Quae libero beatae, harum earum quibusdam corrupti odit aliquid magni aut necessitatibus id iste illo architecto quis? Voluptate nesciunt quae accusamus aliquid aliquam quaerat asperiores fuga, assumenda provident odio vel consectetur modi vitae alias incidunt esse? Ducimus reprehenderit adipisci voluptas fugiat accusamus, laboriosam dolore iure labore magnam unde? Beatae fugit fugiat sunt molestiae harum tempora commodi nesciunt vero autem eius mollitia sint, ex esse, dolorum dicta soluta recusandae. Suscipit tempore blanditiis cum modi! Quidem eius eum ducimus quia eos placeat dolore? Doloremque consectetur vero error nisi minima nihil ducimus rerum, officiis doloribus nam consequatur molestiae sunt, aliquid quaerat eum. Perspiciatis blanditiis beatae iste nobis. Nisi mollitia accusantium, labore magni aliquid illum laboriosam, omnis explicabo commodi laborum et, a natus quasi nulla tempore sequi ea eaque optio. Fuga deleniti, reprehenderit neque unde quidem vitae, modi totam, porro id excepturi aspernatur dolore harum ipsam voluptates odio eos? Voluptate, similique molestias. Voluptas iste animi vitae totam maxime cumque. Laborum dignissimos ab eum commodi vero architecto sit voluptatem cupiditate officiis quia quibusdam, non reprehenderit incidunt.</p>
+    <script>
+        $("p").mouseenter(function(){
+            $(this)
+
+        })
+    </script>
+</body>
+</html> -->
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>image Description</title>
+  </head>
+  <
+  <style>
+    div {
+      width: 400px;
+      padding: 15px;
+      border: 2px solid black;
+      text-align: center;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  </style>
+
+  <body>
+    <h2>Q1. Dibya Shakya</h2>
+    <script src="jquery-4.0.0.min.js"></script>
+    <script>
+      function changeTextOnEnter() {
+        document.getElementById("description").innerHTML =
+          "You are now hovering over the image!";
+      }
+
+      function changeTextOnLeave() {
+        document.getElementById("description").innerHTML =
+          "This is a beautiful nature landscape.";
+      }
+    </script>
+    <div>
+      <img
+        src="nature.jpg"
+        alt="Sample Image"
+        onmouseenter="changeTextOnEnter()"
+        onmouseleave="changeTextOnLeave()"
+      />
+
+      <p id="description">This is a beautiful nature landscape.</p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Method Chaining</title>
+</head>
+<body>
+    <h2>Q3. Dibya Shakya</h2>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<button id="btn">Click</button>
+<div id="box">Hello</div>
+
+    <script>
+        $(document).ready(function(){
+            $('#btn').click(function(){
+                $("#box")
+                    .addClass("active")
+                    .css("color", "red")
+                    .fadeIn(1000)
+                    .delay(2000)
+                    .fadeOut(500).show();
+            })
+        })
+        // Multiple operations in one chain
+       
+    </script>
+</body>
+</html>
